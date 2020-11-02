@@ -25,7 +25,10 @@ class MainActivityTest : TestCase(){
     @Test
     @Throws(Exception::class)
     fun changeText_sameActivity(){
+
+        //Find the view by id
         onView(withId(R.id.edit_text))
+                //Perform action - type string and button clicked
             .perform(typeText(str), closeSoftKeyboard())
             onView(withId(R.id.button_click)).perform(click())
 
